@@ -1,0 +1,10 @@
+#!/usr/bin/with-contenv bash
+
+# create config from defaults if required
+[[ ! -e /config/config.js ]] && \
+	cp /defaults/config.js /config/config.js
+
+# permissions
+chown -R abc:abc \
+	/app \
+	/config
