@@ -7,7 +7,7 @@ RUN \
 RUN \
   echo "**** build node application ****" && \
   git clone https://github.com/Ardakilic/alerthub.git /app && \
-  cd /app && npm install && sed -i 's/\.\.\/etc\/config/\/config\/config/g' src/index.js && \
+  cd /app && npm install && sed -i 's/\.\.\/etc\/config/\/config\/config/g' src/index.mjs && \
   mkdir /defaults && mv etc/config.example.js /defaults/config.js && \
   rm -rf .editorconfig .eslintrc .git* CHANGELOG.md etc LICENSE package-lock.json README.md UPGRADING.md renovate.json
 
